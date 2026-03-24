@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформа на ремонте</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .background {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, #2e1a47 0%, #1a3c4a 50%, #1a2a4a 100%);
+            background-size: 400% 400%;
+            z-index: -1;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            z-index: -1;
+            opacity: 0.6;
+            animation: particlesAnimation 60s linear infinite;
+        }
+
+        @keyframes particlesAnimation {
+            from { background-position: 0 0, 40px 60px, 130px 270px; }
+            to { background-position: 550px 550px, 390px 410px, 380px 820px; }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 50px;
+            text-align: center;
+            max-width: 600px;
+            width: 80%;
+            z-index: 1;
+        }
+
+        .icon-container {
+            font-size: 70px;
+            margin-bottom: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            .glass-panel { padding: 30px; }
+            h1 { font-size: 1.8em; }
+            p { font-size: 1em; }
+            .icon-container { font-size: 50px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="particles"></div>
+
+    <div class="glass-panel">
+        <div class="icon-container">
+            ⚙️
+        </div>
+        <h1>Упс, платформа сломалась</h1>
+        <p>Что-то пошло не так, и платформа временно недоступна. Мы уже нашли проблему и вовсю занимаемся ремонтом. Скоро всё снова заработает!</p>
+    </div>
+</body>
+</html>
