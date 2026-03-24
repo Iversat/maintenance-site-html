@@ -6,7 +6,7 @@
 
 2. Склонируйте репозиторий и перейдите в папку проекта:
 ```bash
-git clone [https://github.com/Iversat/maintenance-site-html](https://github.com/Iversat/maintenance-site-html)
+git clone https://github.com/Iversat/maintenance-site-html](https://github.com/Iversat/maintenance-site-html
 cd maintenance-site-html
 ```
 3. Выполните команду для запуска:
